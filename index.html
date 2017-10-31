@@ -64,11 +64,12 @@
 	L.marker([40.74,-73.88]).addTo(mymap)
 		.bindPopup("<b>Hello!</b><br />This is my neighborhood.").openPopup();
 
-	L.circle([40.74,-73.88], 500, {
-		color: 'red',
-		fillColor: '#f03',
-		fillOpacity: 0.5
-	}).addTo(mymap).bindPopup("I am a circle.");
+	L.polygon([
+		[40.75, -73.89],
+		[40.75, -73.87],
+		[40.74, -73.86],
+		[40.74, -73.89]
+	]).addTo(mymap).bindPopup("My neighborhood.");
 
 
 	var popup = L.popup();
