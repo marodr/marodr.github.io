@@ -51,7 +51,7 @@
         <div id="mapid" style="width: 600px; height: 400px;"></div>
 <script>
 
-	var mymap = L.map('mapid').setView([-73.96,40.77], 9);
+	var mymap = L.map('mapid').setView([-73.96,40.77], 10);
 
 	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 		maxZoom: 13,
@@ -69,12 +69,6 @@
 		fillColor: '#f03',
 		fillOpacity: 0.5
 	}).addTo(mymap).bindPopup("I am a circle.");
-
-	L.polygon([
-		[51.509, -0.08],
-		[51.503, -0.06],
-		[51.51, -0.047]
-	]).addTo(mymap).bindPopup("I am a polygon.");
 
 
 	var popup = L.popup();
