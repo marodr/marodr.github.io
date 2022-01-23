@@ -8,8 +8,6 @@ share-img: /assets/img/path.jpg
 tags: [bus, queens, nyc, test]
 ---
 
-
-    <body>
         <div id="map">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
@@ -309,5 +307,4 @@ tags: [bus, queens, nyc, test]
             resetLabels([layer_EasternQueensNeighborhoods_1,layer_LongIslandRailRoadLIRR_2,layer_LocalBusRoutes_3]);
         });
         </script>
-    </body>
-</html>
+ 
