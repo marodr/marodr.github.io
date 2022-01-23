@@ -8,10 +8,327 @@ share-img: /assets/img/path.jpg
 tags: [bus, queens, nyc, test]
 ---
 
-Under what circumstances should we step off a path? When is it essential that we finish what we start? If I bought a bag of peanuts and had an allergic reaction, no one would fault me if I threw it out. If I ended a relationship with a woman who hit me, no one would say that I had a commitment problem. But if I walk away from a seemingly secure route because my soul has other ideas, I am a flake?
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Mobile meta tags to go in head-->
+        <meta name="HandheldFriendly" content="True">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="MobileOptimized" content="320"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta http-equiv="cleartype" content="on">
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <style>
+        #map {
+            width: 1899px;
+            height: 945px;
+        }
+        </style>
+        <title>Count of Bus Times in NE Queens, New York City</title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="data/EasternQueensNeighborhoods_1.js"></script>
+        <script src="data/LongIslandRailRoadLIRR_2.js"></script>
+        <script src="data/LocalBusRoutes_3.js"></script>
+        <script src="data/StopTimes_4.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        }).fitBounds([[40.72288200038713,-73.83421470923707],[40.78848953439604,-73.69879513436415]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+        }
+        map.createPane('pane_OSMStandard_0');
+        map.getPane('pane_OSMStandard_0').style.zIndex = 400;
+        var layer_OSMStandard_0 = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            pane: 'pane_OSMStandard_0',
+            opacity: 1.0,
+            attribution: '<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 19
+        });
+        layer_OSMStandard_0;
+        map.addLayer(layer_OSMStandard_0);
+        function pop_EasternQueensNeighborhoods_1(feature, layer) {
+        }
 
-The truth is that no one else can definitively know the path we are here to walk. It’s tempting to listen—many of us long for the omnipotent other—but unless they are genuine psychic intuitives, they can’t know. All others can know is their own truth, and if they’ve actually done the work to excavate it, they will have the good sense to know that they cannot genuinely know anyone else’s. Only soul knows the path it is here to walk. Since you are the only one living in your temple, only you can know its scriptures and interpretive structure.
+        function style_EasternQueensNeighborhoods_1_0() {
+            return {
+                pane: 'pane_EasternQueensNeighborhoods_1',
+                opacity: 1,
+                color: 'rgba(255,111,88,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 4.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(0,147,164,0.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_EasternQueensNeighborhoods_1');
+        map.getPane('pane_EasternQueensNeighborhoods_1').style.zIndex = 401;
+        map.getPane('pane_EasternQueensNeighborhoods_1').style['mix-blend-mode'] = 'normal';
+        var layer_EasternQueensNeighborhoods_1 = new L.geoJson(json_EasternQueensNeighborhoods_1, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_EasternQueensNeighborhoods_1',
+            layerName: 'layer_EasternQueensNeighborhoods_1',
+            pane: 'pane_EasternQueensNeighborhoods_1',
+            onEachFeature: pop_EasternQueensNeighborhoods_1,
+            style: style_EasternQueensNeighborhoods_1_0,
+        });
+        bounds_group.addLayer(layer_EasternQueensNeighborhoods_1);
+        map.addLayer(layer_EasternQueensNeighborhoods_1);
+        function pop_LongIslandRailRoadLIRR_2(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Route Name</th>\
+                        <td>' + (feature.properties['route_long'] !== null ? autolinker.link(feature.properties['route_long'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
 
-At the heart of the struggle are two very different ideas of success—survival-driven and soul-driven. For survivalists, success is security, pragmatism, power over others. Success is the absence of material suffering, the nourishing of the soul be damned. It is an odd and ironic thing that most of the material power in our world often resides in the hands of younger souls. Still working in the egoic and material realms, they love the sensations of power and focus most of their energy on accumulation. Older souls tend not to be as materially driven. They have already played the worldly game in previous lives and they search for more subtle shades of meaning in this one—authentication rather than accumulation. They are often ignored by the culture at large, although they really are the truest warriors.
+        function style_LongIslandRailRoadLIRR_2_0() {
+            return {
+                pane: 'pane_LongIslandRailRoadLIRR_2',
+                opacity: 1,
+                color: 'rgba(0,82,88,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_LongIslandRailRoadLIRR_2');
+        map.getPane('pane_LongIslandRailRoadLIRR_2').style.zIndex = 402;
+        map.getPane('pane_LongIslandRailRoadLIRR_2').style['mix-blend-mode'] = 'normal';
+        var layer_LongIslandRailRoadLIRR_2 = new L.geoJson(json_LongIslandRailRoadLIRR_2, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_LongIslandRailRoadLIRR_2',
+            layerName: 'layer_LongIslandRailRoadLIRR_2',
+            pane: 'pane_LongIslandRailRoadLIRR_2',
+            onEachFeature: pop_LongIslandRailRoadLIRR_2,
+            style: style_LongIslandRailRoadLIRR_2_0,
+        });
+        bounds_group.addLayer(layer_LongIslandRailRoadLIRR_2);
+        map.addLayer(layer_LongIslandRailRoadLIRR_2);
+        function pop_LocalBusRoutes_3(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Route ID</th>\
+                        <td>' + (feature.properties['route_shor'] !== null ? autolinker.link(feature.properties['route_shor'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
 
-A soulful notion of success rests on the actualization of our innate image. Success is simply the completion of a soul step, however unsightly it may be. We have finished what we started when the lesson is learned. What a fear-based culture calls a wonderful opportunity may be fruitless and misguided for the soul. Staying in a passionless relationship may satisfy our need for comfort, but it may stifle the soul. Becoming a famous lawyer is only worthwhile if the soul demands it. It is an essential failure if you are called to be a monastic this time around. If you need to explore and abandon ten careers in order to stretch your soul toward its innate image, then so be it. Flake it till you make it.
+        function style_LocalBusRoutes_3_0() {
+            return {
+                pane: 'pane_LocalBusRoutes_3',
+                opacity: 1,
+                color: 'rgba(85,186,191,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 6.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_LocalBusRoutes_3');
+        map.getPane('pane_LocalBusRoutes_3').style.zIndex = 403;
+        map.getPane('pane_LocalBusRoutes_3').style['mix-blend-mode'] = 'normal';
+        var layer_LocalBusRoutes_3 = new L.geoJson(json_LocalBusRoutes_3, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_LocalBusRoutes_3',
+            layerName: 'layer_LocalBusRoutes_3',
+            pane: 'pane_LocalBusRoutes_3',
+            onEachFeature: pop_LocalBusRoutes_3,
+            style: style_LocalBusRoutes_3_0,
+        });
+        bounds_group.addLayer(layer_LocalBusRoutes_3);
+        map.addLayer(layer_LocalBusRoutes_3);
+        function pop_StopTimes_4(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Stop ID</th>\
+                        <td>' + (feature.properties['stop_id'] !== null ? autolinker.link(feature.properties['stop_id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Stop Times Count</th>\
+                        <td>' + (feature.properties['COUNT_stop'] !== null ? autolinker.link(feature.properties['COUNT_stop'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_StopTimes_4_0(feature) {
+            if (feature.properties['COUNT_stop'] >= 1.000000 && feature.properties['COUNT_stop'] <= 401.000000 ) {
+                return {
+                pane: 'pane_StopTimes_4',
+                radius: 5.600000000000001,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(254,224,210,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['COUNT_stop'] >= 401.000000 && feature.properties['COUNT_stop'] <= 820.000000 ) {
+                return {
+                pane: 'pane_StopTimes_4',
+                radius: 10.2,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(252,146,114,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['COUNT_stop'] >= 820.000000 && feature.properties['COUNT_stop'] <= 1816.000000 ) {
+                return {
+                pane: 'pane_StopTimes_4',
+                radius: 16.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(222,45,38,1.0)',
+                interactive: true,
+            }
+            }
+        }
+        map.createPane('pane_StopTimes_4');
+        map.getPane('pane_StopTimes_4').style.zIndex = 404;
+        map.getPane('pane_StopTimes_4').style['mix-blend-mode'] = 'normal';
+        var layer_StopTimes_4 = new L.geoJson(json_StopTimes_4, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_StopTimes_4',
+            layerName: 'layer_StopTimes_4',
+            pane: 'pane_StopTimes_4',
+            onEachFeature: pop_StopTimes_4,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_StopTimes_4_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_StopTimes_4);
+        map.addLayer(layer_StopTimes_4);
+            var title = new L.Control();
+            title.onAdd = function (map) {
+                this._div = L.DomUtil.create('div', 'info');
+                this.update();
+                return this._div;
+            };
+            title.update = function () {
+                this._div.innerHTML = '<h2>Count of Bus Times in NE Queens, New York City</h2>';
+            };
+            title.addTo(map);
+            var abstract = new L.Control({'position':'topright'});
+            abstract.onAdd = function (map) {
+                this._div = L.DomUtil.create('div',
+                'leaflet-control abstract');
+                this._div.id = 'abstract'
+                    this._div.setAttribute("onmouseenter", "abstract.show()");
+                    this._div.setAttribute("onmouseleave", "abstract.hide()");
+                    this.hide();
+                    return this._div;
+                };
+                abstract.hide = function () {
+                    this._div.classList.remove("abstractUncollapsed");
+                    this._div.classList.add("abstract");
+                    this._div.innerHTML = 'i'
+                }
+                abstract.show = function () {
+                    this._div.classList.remove("abstract");
+                    this._div.classList.add("abstractUncollapsed");
+                    this._div.innerHTML = 'This map shows the count of bus times by stop (only local route) in northeast Queens, New York City. Meaning this show the number of times a bus stopped at a bus stop. Transit data is from January 11, 2022 and it comes from the MTA: http://web.mta.info/developers/developer-data-terms.html#data<br />A key point from this map is that bus routes vary by bus stop. ';
+            };
+            abstract.addTo(map);
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'Stop Times<br /><table><tr><td style="text-align: center;"><img src="legend/StopTimes_4_14010.png" /></td><td>1 - 401</td></tr><tr><td style="text-align: center;"><img src="legend/StopTimes_4_4018201.png" /></td><td>401 - 820</td></tr><tr><td style="text-align: center;"><img src="legend/StopTimes_4_82018162.png" /></td><td>820 - 1816</td></tr></table>': layer_StopTimes_4,'<img src="legend/LocalBusRoutes_3.png" /> Local Bus Routes': layer_LocalBusRoutes_3,'<img src="legend/LongIslandRailRoadLIRR_2.png" /> Long Island Rail Road (LIRR)': layer_LongIslandRailRoadLIRR_2,'<img src="legend/EasternQueensNeighborhoods_1.png" /> Eastern Queens Neighborhoods': layer_EasternQueensNeighborhoods_1,"OSM Standard": layer_OSMStandard_0,},{collapsed:false}).addTo(map);
+        setBounds();
+        var i = 0;
+        layer_LongIslandRailRoadLIRR_2.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['route_long'] !== null?String('<div style="color: #000000; font-size: 10pt; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['route_long']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_LongIslandRailRoadLIRR_2'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_LocalBusRoutes_3.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['route_shor'] !== null?String('<div style="color: #000000; font-size: 10pt; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['route_shor']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_LocalBusRoutes_3'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        resetLabels([layer_EasternQueensNeighborhoods_1,layer_LongIslandRailRoadLIRR_2,layer_LocalBusRoutes_3]);
+        map.on("zoomend", function(){
+            resetLabels([layer_EasternQueensNeighborhoods_1,layer_LongIslandRailRoadLIRR_2,layer_LocalBusRoutes_3]);
+        });
+        map.on("layeradd", function(){
+            resetLabels([layer_EasternQueensNeighborhoods_1,layer_LongIslandRailRoadLIRR_2,layer_LocalBusRoutes_3]);
+        });
+        map.on("layerremove", function(){
+            resetLabels([layer_EasternQueensNeighborhoods_1,layer_LongIslandRailRoadLIRR_2,layer_LocalBusRoutes_3]);
+        });
+        </script>
+    </body>
+</html>
