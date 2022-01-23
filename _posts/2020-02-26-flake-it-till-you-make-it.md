@@ -8,28 +8,7 @@ share-img: /assets/img/path.jpg
 tags: [bus, queens, nyc, test]
 ---
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!-- Mobile meta tags to go in head-->
-        <meta name="HandheldFriendly" content="True">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta name="MobileOptimized" content="320"/>
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta http-equiv="cleartype" content="on">
-        <meta name="mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="css/leaflet.css">
-        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
-        <style>
-        #map {
-            width: 1899px;
-            height: 945px;
-        }
-        </style>
-        <title>Count of Bus Times in NE Queens, New York City</title>
-    </head>
+
     <body>
         <div id="map">
         </div>
