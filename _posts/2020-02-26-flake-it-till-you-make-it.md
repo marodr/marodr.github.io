@@ -8,3 +8,4 @@ share-img: /assets/img/path.jpg
 tags: [bus, queens, nyc, test]
 ---
 
+[I'm an inline-style link](https://marodr.github.io/indexbus)
