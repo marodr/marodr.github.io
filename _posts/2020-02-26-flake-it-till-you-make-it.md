@@ -9,5 +9,6 @@ tags: [bus, queens, nyc, test]
 ---
 
 [My map](https://marodr.github.io/indexbus)
-[I'm a relative reference to a repository file](../indexbus.html)
-<iframe src="/indexbus.html" height="600px" width="100%" style="border:none;"></iframe>
+
+<iframe src="/indexbus.html" height="600px" width="900px" frameborder="0" allowfullscreen>&nbsp;" </iframe>
+
