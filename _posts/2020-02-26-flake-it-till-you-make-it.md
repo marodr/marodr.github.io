@@ -10,5 +10,5 @@ tags: [bus, queens, nyc, test]
 
 [My map](https://marodr.github.io/indexbus)
 
-<iframe src="/indexbus.html" height="600px" width="400px" frameborder="0" allowfullscreen>&nbsp;" </iframe>
+<iframe src="/indexbus.html" height="600px" width="100%" style="border:none;" </iframe>
 
