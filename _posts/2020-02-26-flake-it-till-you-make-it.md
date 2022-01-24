@@ -9,4 +9,4 @@ tags: [bus, queens, nyc, test]
 ---
 
 [My map](https://marodr.github.io/indexbus)
-<iframe src="indexbus.html" height="600px" width="100%" style="border:none;"></iframe>
+<iframe src="C:\Users\maria\Documents\GitHub\marodr.github.io\indexbus.html" height="600px" width="100%" style="border:none;"></iframe>
