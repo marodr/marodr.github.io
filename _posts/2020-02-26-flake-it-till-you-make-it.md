@@ -20,9 +20,9 @@ For this project right now, I focused on the local bus routes.
 
 *Write next steps
 
-Next steps for this map is to continue updating this data as soon as the MTA releases the data for buses. I would also like to add census data to this map so that we can see the changes of population of each tract in these bus routes.
+Next steps for this map is to continue updating this local bus data as soon as the MTA releases. I would also like to add census data to this map so that we can see the changes of population of each tract in these bus routes. I would also like to do a similar analysis for the LIRR and the express bus in Northeast Queens .
 
-[Open map below in new tab](https://marodr.github.io/indexbus)
 
-<iframe src="/indexbus.html" height="600px" width="1200px" style="border:none;"> </iframe>
+
+<iframe src="/indexbus.html" height="800px" width="1200px" style="border:none;"> </iframe>
 
