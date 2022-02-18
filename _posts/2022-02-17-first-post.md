@@ -32,7 +32,7 @@ Ideally, the next steps for this project is to be able to do a survey in Northea
 But I think I would want to see how many people actually use each stop in Northeast Queens. I think this would be an interesting analysis if I could get a day's worth data for each stop. 
 
 
-<iframe src="/indexbus.html" height="405px" width="720px" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay"> </iframe>
+<iframe src="/indexbus.html" height="705px" width="720px" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay"> </iframe>
 
 Data Sources:
 
