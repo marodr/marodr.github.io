@@ -36,8 +36,8 @@ But I think I would want to see how many people actually use each stop in Northe
 
 Data Sources:
 
-[MTA Bus Data](http://web.mta.info/developers/developer-data-terms.html#data)
-[tidycensus R package for RStudio](https://walker-data.com/tidycensus/)
-[Northeast Queens data was made up of neighborhoods in NTA dataset](https://data.cityofnewyork.us/City-Government/2020-Neighborhood-Tabulation-Areas-NTAs-Mapped/4hft-v355)
+*[MTA Bus Data](http://web.mta.info/developers/developer-data-terms.html#data)
+*[tidycensus R package for RStudio](https://walker-data.com/tidycensus/)
+*[Northeast Queens data was made up of neighborhoods in NTA dataset](https://data.cityofnewyork.us/City-Government/2020-Neighborhood-Tabulation-Areas-NTAs-Mapped/4hft-v355)
 
 
