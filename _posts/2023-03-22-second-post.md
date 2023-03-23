@@ -9,11 +9,12 @@ tags: [lirr, queens, nyc, gis, second post]
 ---
 This is my second post on my "website"!
 
-I live in northeast Queens and I have heard about people in the neighborhood being opposed to governor Hochul's plan to increase housing near LIRR train stops. 
+I live in northeast Queens and I have heard about people in the area being opposed to governor Hochul's plan to increase housing half a mile from LIRR train stops. So I downloaded some data and tried to see where housing could potentially be built in northeast Queens.
 
-1. local bus fare = $2.75 (one way)
-2. express bus fare = $6.75 (one way)
-3. LIRR = Off Peak fare = $7.75 (one way) and Peak fare = $10.75 (one way)
+1. I first downloaded the data for the LIRR stops and selected stops in what I considered to be northeast Queens
+2. Then I created a half mile buffer around these LIRR stops
+3. Next, I clipped the zoning data so that I could see the zoning areas now in these half mile buffers
+4. 
 
 For this project right now, I focused on the local bus routes. I took the local bus data from the MTA website and mapped the bus stops to make sure I was mapping the current bus stops. I also used RStudio to download shapefiles with census data that I wanted my web map to have. I used tidycensus, which is a R package, in RStudio to process the ACS 2019 data for population, median income, and percent poverty. I used Queens County census data and didn't clip the census data to the Northeast Queens.
 
