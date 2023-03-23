@@ -7,9 +7,9 @@ thumbnail-img: /assets/img/thumb_busstops_012022.png
 share-img: /assets/img/path.jpg
 tags: [lirr, queens, nyc, gis, second post]
 ---
-This is my first post on my "website"!
+This is my second post on my "website"!
 
-I had the privilege to attend TRB 2022 conference in Washington DC mid-January 2022 and I learned so much about equity in transportation. I know that New York City has been focusing in equity in the last couple of years but for a personal project, I wanted to focus on equity in one public transit desert of NYC and that is in Northeast Queens. Northeast Queens has no subway line but residents have access to bus routes (both local and express) and a rail line, the LIRR. These services (all provided by the MTA) have different fares to go to Manhattan:
+I live in northeast Queens and I have heard about people in the neighborhood being opposed to governor Hochul's plan to increase housing near LIRR train stops. 
 
 1. local bus fare = $2.75 (one way)
 2. express bus fare = $6.75 (one way)
