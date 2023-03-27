@@ -25,8 +25,9 @@ First, for the Douglaston/Little Neck neighborhoods, most of it is zoned for res
 
 Data Sources:
 
-* [MTA Bus Data](http://web.mta.info/developers/developer-data-terms.html#data)
-* [tidycensus R package for RStudio](https://walker-data.com/tidycensus/)
-* [Northeast Queens data was made up of neighborhoods in NTA dataset](https://data.cityofnewyork.us/City-Government/2020-Neighborhood-Tabulation-Areas-NTAs-Mapped/4hft-v355)
+* [Zoning and Land Use Map](https://zola.planning.nyc.gov/)
+*[LIRR Data](https://data.ny.gov/Transportation/Long-Island-Railroad-Map/jbqr-kiev)
+* [Coastal Zone Data](https://www.nyc.gov/site/planning/data-maps/open-data/dwn-wrp.page)
+* [Historic Districts](https://data.cityofnewyork.us/Housing-Development/Historic-Districts/xbvj-gfnw)
 
 
