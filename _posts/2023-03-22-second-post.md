@@ -24,9 +24,9 @@ First, for the Douglaston/Little Neck neighborhoods, most of it is zoned for res
 <iframe src="/LIRR_NE_Queens.html" height="705px" width="920px" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay"> </iframe>
 
 Data Sources:
-
+* [Governor's Hochul's Housing Plan](https://www.governor.ny.gov/programs/new-york-housing-compact)
 * [Zoning and Land Use Map](https://zola.planning.nyc.gov/)
-*[LIRR Data](https://data.ny.gov/Transportation/Long-Island-Railroad-Map/jbqr-kiev)
+* [LIRR Data](https://data.ny.gov/Transportation/Long-Island-Railroad-Map/jbqr-kiev)
 * [Coastal Zone Data](https://www.nyc.gov/site/planning/data-maps/open-data/dwn-wrp.page)
 * [Historic Districts](https://data.cityofnewyork.us/Housing-Development/Historic-Districts/xbvj-gfnw)
 
