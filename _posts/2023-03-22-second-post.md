@@ -4,7 +4,7 @@ title: LIRR Stops and Zoning in Northeast Queens
 subtitle: More Housing in NE Queens
 cover-img: /assets/img/path.jpg
 thumbnail-img: /assets/img/whole_area_thumbnail.jpg
-share-img: /assets/img/path.jpg
+share-img: /assets/img/bl_image.jpg
 tags: [lirr, queens, nyc, gis, second post]
 ---
 This is my second post on my "website"!
