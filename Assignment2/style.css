@@ -1,0 +1,77 @@
+body{
+    background-color: rgba(38, 87, 131, 0.614);
+}
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+  
+.form-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.header{
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+  
+.toggle-btn {
+    flex: 1; 
+    padding: 0.5rem 1rem;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+  
+.toggle-btn.active {
+    background-color: #007bff;
+    color: #fff;
+}
+  
+.form-group {
+    margin-bottom: 1rem;
+}
+  
+input[type="text"],
+input[type="email"],
+input[type="password"]  {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+  }
+  
+button[type="submit"] {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+  
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+  
+.hidden {
+    display: none;
+}
+.get-started{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+}
+.get-started-btn{
+    flex: 1; 
+    /* padding: 0.5rem 1rem; */
+    /* background-color: #f0f0f0; */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
